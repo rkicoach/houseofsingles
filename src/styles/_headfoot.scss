@@ -1,0 +1,118 @@
+@use "./abstracts" as abs;
+
+@mixin headfoot {
+  font-family: "Yusei Magic", sans-serif;
+  background-color: var(--head_bg);
+  width: 100%;
+  text-align: center;
+}
+
+header {
+  @include headfoot;
+  .topbanner {
+    background-color: black;
+    color: #bdbcbc;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    .houselogo {
+      svg {
+        transform: translateY(-4px);
+        fill: #bdbcbc;
+        height: max(15px, 2vw);
+        width: auto;
+      }
+    }
+    .info {
+      padding: 10px;
+      img {
+        height: calc(2.5rem - 12px);
+        padding-bottom: 2px;
+        width: auto;
+        //background-color: purple;
+      }
+      span {
+        width: 1.5rem;
+        display: inline-block;
+        //border: 1px solid red;
+      }
+    }
+
+    @media only screen and (max-width: abs.$smallscreen) {
+      display: none;
+    }
+  }
+
+  // nav {
+  //   ul {
+  //     flex-direction: row;
+  //     justify-content: space-around;
+  //     padding: 1rem;
+  //     margin: 0 auto;
+  //     width: 80%;
+  //     height: 100%;
+  //     display: flex;
+
+  //     li {
+  //       display: flex;
+  //       padding: 0 2rem;
+  //       border-radius: 20px;
+  //       text-align: center;
+  //       height: 100%;
+  //       &:hover {
+  //         color: #bdbcbc;
+  //       }
+  //       a {
+  //         justify-content: space-between;
+  //         height: 100%;
+  //         text-transform: uppercase;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+footer {
+  // @include headfoot;
+  // display: flex;
+  // justify-content: center;
+  // height: 2.5rem;
+  // div {
+  //   padding: 8px;
+  // }
+  background-color: #000;
+  color: #fff;
+  -webkit-box-shadow: 0 2px 5px 5px rgb(200 200 200 / 50%);
+  box-shadow: 0 2px 5px 5px rgb(200 200 200 / 50%);
+
+  .footercontent {
+    padding: 30px;
+  }
+
+  .footerheadline {
+    color: #fff;
+    border-bottom: 1px solid #222;
+    padding-bottom: 20px;
+  }
+  .footer a {
+    color: #fff;
+  }
+  .footermenu {
+    font-size: 0.8em;
+    line-height: 0.9em;
+  }
+  .social {
+    padding: 5px;
+    font-size: 1.8em;
+    cursor: pointer;
+  }
+  .copyrigt {
+    border-top: 1px solid #222;
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+  }
+  .t40 {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,83 @@
+@use './abstracts' as v;
+
+.card-big {
+  border-radius: 22px;
+  color: var(--text);
+  position: absolute;
+  top: 5rem;
+  //border: 1px solid red;
+  width: 50%;
+  margin-left: 20%;
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 2rem;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  font-family: v.$font;
+
+  @media only screen and (max-width: v.$phonescreen) {
+    top: 1rem;
+    padding-top: 1rem;
+  }
+  article {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: max(11px, 2vw);
+      line-height: max(11px, 2vw);
+
+      text-transform: uppercase;
+      padding-bottom: 2rem;
+      @media only screen and (max-width: v.$smallscreen) {
+        font-size: max(8px, 1.5vw);
+        line-height: max(8px, 1.5vw);
+
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+      }
+    }
+    span {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      font-size: max(8px, 2vw);
+      @media only screen and (max-width: v.$smallscreen) {
+        font-size: max(8px, 1.5vw);
+        margin-bottom: 1rem;
+        padding: 1rem;
+      }
+    }
+    @media only screen and (max-width: v.$smallscreen) {
+      padding: 1rem;
+    }
+  }
+  .spacebetween {
+    display: flex;
+    justify-content: space-around;
+    a {
+      font-size: max(8px, 1.5vw);
+    }
+  }
+
+  .btn {
+    text-transform: capitalize;
+    color: var(--text);
+    opacity: 1;
+    background: var(--head_bg);
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    padding: 1rem;
+    &:hover {
+      color: var(--head_bg);
+      border: 1px solid black;
+      background: var(--text);
+    }
+    &:active {
+      border: 1px solid lightgrey;
+      background: darkgrey;
+    }
+
+    @media only screen and (max-width: v.$smallscreen) {
+      padding: 0.5rem;
+    }
+  }
+}

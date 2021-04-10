@@ -1,0 +1,21 @@
+@use "global";
+@use "cards";
+@use "calendar";
+@use "headfoot";
+@use "home";
+@use "inspirasjon";
+@use "omoss";
+@use "dress";
+@use "bryllup";
+@use "bedriftsavtale";
+@use "nav";
+@use "detailedPost";
+
+@use "abstracts" as abs;
+
+
+.btn {
+  @include abs.hover-lift();
+}
+
+/* @use "hero"; */

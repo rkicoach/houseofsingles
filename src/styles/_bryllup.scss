@@ -1,0 +1,30 @@
+@use './abstracts' as v;
+
+.bryllup_layout{
+  color: black;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+
+  .bottom_btn_layout{
+    text-align: center;
+    margin-top: 10px;
+    
+  }
+
+  .button_bg{
+    background-color: #667C89;
+    border: #667C89;;
+  }
+  @media only screen and (max-width: v.$smallscreen) {
+    .title{
+      margin-top: 5px;
+      margin-bottom: 10px;
+      font-size: max(11px, 3.5vw);
+    }
+    .description{
+      margin-top: 5px;
+      font-size: max(11px, 2.5vw);
+    }
+  }
+}

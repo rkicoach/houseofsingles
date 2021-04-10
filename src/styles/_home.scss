@@ -1,0 +1,68 @@
+@use './abstracts' as v;
+
+main {
+  display: grid;
+  #frontPageImg {
+    width: 100%;
+    // position: relative;
+    // background-color: #353535;
+    // margin-left: 15%;
+    // margin-right: 15%;
+
+    // @media only screen and (max-width: 900px) {
+    //   margin-left: 5%;
+    //   margin-right: 5%;
+    // }
+
+    // @media only screen and (max-width: 400px) {
+    //   margin-left: 0%;
+    //   margin-right: 0%;
+    // }
+
+    // img {
+    //   width: 100%;
+    //   height: auto;
+    //   opacity: 0.4;
+    // }
+  }
+  .Image {  
+    width: 100%;
+  }
+  .smokingImg{
+    width: 100%;
+    height: 450px;
+  }
+  .teaser {
+    padding: 10px 40px;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(256,256,256,0.5);
+
+  }
+
+  .promoimg {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .hugefont-small {
+    font-family: v.$font;
+    font-size: 1.5em;
+    color:black
+}
+
+/* ul {
+    list-style-image: url("../images/sword-32x32.png");
+  } */
+
+.strike {
+  text-decoration: line-through wavy red;
+}
+
+}
